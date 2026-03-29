@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Ali - AI Agent Developer Portfolio">
+    <title>Ali | AI Agent Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body class="animated-bg">
+
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+    <!-- Liquid Blob Background -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ali Hamas<span>.</span></div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" aria-label="Navigate to Home section">Home</a>
+                <a href="#about" class="nav-link" aria-label="Navigate to About section">About</a>
+                <a href="#work" class="nav-link" aria-label="Navigate to Work section">Work</a>
+                <a href="#contact" class="nav-link" aria-label="Navigate to Contact section">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-name">
+                    <span class="name-char">A</span>
+                    <span class="name-char">l</span>
+                    <span class="name-char">i</span>
+                    <span class="name-char-space"></span>
+                    <span class="name-char">H</span>
+                    <span class="name-char">a</span>
+                    <span class="name-char">m</span>
+                    <span class="name-char">a</span>
+                    <span class="name-char">s</span>
+                </h1>
+                <p class="hero-title">AI Agent Developer</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary" aria-label="View my projects">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" aria-label="Send me a message">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Rotating Card -->
+            <div class="hero-card-container">
+                <div class="hero-card animate-glow">
+                    <div class="card-face card-front">
+                        <div class="card-content">
+                            <div class="card-icon">
+                                <svg viewBox="0 0 100 100" fill="none">
+                                    <circle cx="50" cy="50" r="45" stroke="url(#grad1)" stroke-width="2" />
+                                    <path d="M30 50L45 65L70 35" stroke="url(#grad1)" stroke-width="3"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#2563eb" />
+                                            <stop offset="100%" style="stop-color:#0ea5e9" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <h3>AI Development</h3>
+                            <p>Building intelligent agents</p>
+                        </div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-content">
+                            <h3>Let's Build</h3>
+                            <p>Creating the future with AI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-down"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="card-glow"></div>
+                    <div class="card-inner">
+                        <h3>Chief AI Architect</h3>
+                        <p>Bridging the gap between conceptual AI and autonomous enterprise solutions. I specialize in architecting high-performance agents that anticipate business needs, automate complex workflows, and deliver proactive intelligence at scale.</p>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <span class="skill-icon">🤖</span>
+                                <span>AI Development</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">⚡</span>
+                                <span>Backend Systems</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🚀</span>
+                                <span>FastAPI</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🐍</span>
+                                <span>Python Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="work" class="projects">
+        <!-- Floating Decorative Orbs -->
+        <div class="projects-orb projects-orb-1"></div>
+        <div class="projects-orb projects-orb-2"></div>
+        <div class="projects-orb projects-orb-3"></div>
+
+        <div class="container">
+            <!-- Section Header with Animated Line -->
+            <div class="section-header-v2">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">Selected Works</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-title-v2">
+                    <span class="title-word">Featured</span>
+                    <span class="title-word gradient-text">Projects</span>
+                </h2>
+                <p class="section-tagline">Crafting intelligent solutions that push boundaries</p>
+            </div>
+
+            <!-- Projects Grid - Uniform Cards -->
+            <div class="bento-grid">
+                <!-- Card 1: LearnHub -->
+                <div class="bento-card" data-project="learnhub">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Live</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">01</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Learnhub.jpg" alt="LearnHub">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">Web App</span>
+                        <h3 class="bento-title">LearnHub</h3>
+                        <p class="bento-desc">AI-powered learning management system</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 2: Business AI -->
+                <div class="bento-card" data-project="business_assistant">
+                    <div class="bento-status">
+                        <div class="status-dot beta"></div>
+                        <span>Development</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">02</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Business-Assistant.jpg" alt="AI Business Assistant">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">AI Agent</span>
+                        <h3 class="bento-title">Business AI</h3>
+                        <p class="bento-desc">High-performance proactive assistant</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 3: Study Assistant -->
+                <div class="bento-card" data-project="study">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Completed</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">03</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Study assistant.jpg" alt="Study Assistant">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">AI Assistant</span>
+                        <h3 class="bento-title">Study AI</h3>
+                        <p class="bento-desc">Smart learning companion</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 4: LinkedIn Automation -->
+                <div class="bento-card" data-project="linkedin">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Completed</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">04</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Linkeding automation in langflow.jpg" alt="LinkedIn Automation">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">AI Automation</span>
+                        <h3 class="bento-title">LinkedIn Bot</h3>
+                        <p class="bento-desc">Intelligent networking &amp; lead generation</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 5: Leads Scraper -->
+                <div class="bento-card" data-project="leads">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Finalized</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">05</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Leads Scrapper.jpg" alt="Leads Scraper">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">Data Tools</span>
+                        <h3 class="bento-title">Leads Scraper</h3>
+                        <p class="bento-desc">Automated B2B lead generation</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+   </div>
+
+                <!-- Card 6: Post Generator -->
+                <div class="bento-card" data-project="post">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Live</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">06</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Post generator.jpg" alt="Post Generator">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">Content AI</span>
+                        <h3 class="bento-title">Post Generator</h3>
+                        <p class="bento-desc">AI social media content</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 7: Spotify Clone -->
+                <div class="bento-card" data-project="spotify">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Concept</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">07</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Simple Spotify Clone.jpg" alt="Spotify Clone">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">Web Dev</span>
+                        <h3 class="bento-title">Spotify Clone</h3>
+                        <p class="bento-desc">Music streaming interface</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 8: Business Assistant -->
+                <div class="bento-card" data-project="business_assistant">
+                    <div class="bento-status">
+                        <div class="status-dot beta"></div>
+                        <span>Development</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">08</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Business-Assistant.jpg" alt="AI Business Assistant">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">AI Agent</span>
+                        <h3 class="bento-title">Business AI</h3>
+                        <p class="bento-desc">High-performance proactive assistant</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+
+                <!-- Card 9: Discord AI Bot -->
+                <div class="bento-card" data-project="discord_bot">
+                    <div class="bento-status">
+                        <div class="status-dot"></div>
+                        <span>Completed</span>
+                    </div>
+                    <div class="card-click-ripple"></div>
+                    <div class="bento-number">09</div>
+                    <div class="bento-image">
+                        <img src="images/projects/Discord-Bot.jpg" alt="Discord AI Bot">
+                        <div class="bento-shine"></div>
+                    </div>
+                    <div class="bento-content">
+                        <span class="bento-badge">AI Chief of Staff</span>
+                        <h3 class="bento-title">Discord AI Bot</h3>
+                        <p class="bento-desc">Hands-free voice productivity agent</p>
+                        <div class="bento-action">
+                            <span class="action-text">Explore Project</span>
+                            <div class="action-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bento-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal Popup -->
+    <div id="projectModal" class="modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-links">
+                    <a href="mailto:alihamas21280811@gmail.com" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Email</h4>
+                            <p>alihamas21280811@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Ali-Hamas" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <p>@Ali-Hamas</p>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/alihamas/" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>LinkedIn</h4>
+                            <p>Ali Hamas</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-copyright">
+                <p>&copy; 2026 <span>Ali Hamas</span>. Built for the future of AI.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/Ali-Hamas" target="_blank" aria-label="GitHub">GH</a>
+                <a href="https://linkedin.com/in/alihamas" target="_blank" aria-label="LinkedIn">LI</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="projects-modal.js"></script>
+</body>
+
+</html>

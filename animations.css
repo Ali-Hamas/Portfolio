@@ -1,0 +1,423 @@
+/* ========================================
+   ANIMATIONS.CSS - Premium Animation Effects
+   ======================================== */
+
+/* ---- Keyframe Animations ---- */
+
+/* Floating Animation for Hero Name */
+@keyframes float3D {
+
+    0%,
+    100% {
+        transform: translateY(0) rotateX(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotateX(5deg);
+    }
+}
+
+/* Typing Cursor Blink */
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Gradient Background Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), 0 0 60px rgba(118, 75, 162, 0.4);
+    }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger Animation for Cards */
+@keyframes staggerIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Shimmer Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Rotate 3D */
+@keyframes rotate3D {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+/* Wave Animation for Text */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-8px);
+    }
+
+    75% {
+        transform: translateY(8px);
+    }
+}
+
+/* ---- Animation Utility Classes ---- */
+
+.animate-float {
+    animation: float3D 4s ease-in-out infinite;
+}
+
+.animate-glow {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradientShift 8s ease infinite;
+}
+
+.animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* ---- Scroll Reveal Classes ---- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ---- 3D Card Tilt Effect ---- */
+
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.tilt-card:hover {
+    transform: perspective(1000px) rotateX(var(--rotateX, 0deg)) rotateY(var(--rotateY, 0deg));
+}
+
+.tilt-card .card-content {
+    transform: translateZ(30px);
+}
+
+/* ---- Magnetic Button Effect ---- */
+
+.magnetic-btn {
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic-btn:hover {
+    transform: translate(var(--x, 0), var(--y, 0));
+}
+
+/* ---- Ripple Click Effect ---- */
+
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.ripple:active::after {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 1;
+    transition: transform 0s, opacity 0s;
+}
+
+/* ---- Hero Name 3D Effect ---- */
+
+.hero-name-3d {
+    perspective: 1000px;
+}
+
+.hero-name-3d .name-char {
+    display: inline-block;
+    animation: float3D 3s ease-in-out infinite;
+    text-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.1),
+        0 2px 0 rgba(0, 0, 0, 0.1),
+        0 3px 0 rgba(0, 0, 0, 0.08),
+        0 4px 0 rgba(0, 0, 0, 0.06),
+        0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hero-name-3d .name-char:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-name-3d .name-char:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.hero-name-3d .name-char:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.hero-name-3d .name-char:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.hero-name-3d .name-char:nth-child(6) {
+    animation-delay: 0.4s;
+}
+
+.hero-name-3d .name-char:nth-child(7) {
+    animation-delay: 0.5s;
+}
+
+.hero-name-3d .name-char:nth-child(8) {
+    animation-delay: 0.6s;
+}
+
+.hero-name-3d .name-char:nth-child(9) {
+    animation-delay: 0.7s;
+}
+
+/* ---- Typing Cursor ---- */
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+/* ---- Animated Background ---- */
+
+.animated-bg {
+    background: linear-gradient(-45deg, #0a0a0f, #1a1a2e, #16213e, #0f3460);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* ---- Neon Glow Effect ---- */
+
+.neon-glow {
+    box-shadow:
+        0 0 5px rgba(102, 126, 234, 0.5),
+        0 0 10px rgba(102, 126, 234, 0.3),
+        0 0 20px rgba(102, 126, 234, 0.2),
+        0 0 40px rgba(102, 126, 234, 0.1);
+}
+
+.neon-glow:hover {
+    box-shadow:
+        0 0 10px rgba(102, 126, 234, 0.8),
+        0 0 20px rgba(102, 126, 234, 0.6),
+        0 0 40px rgba(102, 126, 234, 0.4),
+        0 0 80px rgba(102, 126, 234, 0.2);
+}
+
+/* ---- Staggered Animation Delays ---- */
+
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s;
+}
+
+.stagger-5 {
+    animation-delay: 0.5s;
+}
+
+.stagger-6 {
+    animation-delay: 0.6s;
+}
+
+.stagger-7 {
+    animation-delay: 0.7s;
+}
+
+/* ---- Scroll Progress Bar ---- */
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    z-index: 10000;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.1s linear;
+}
+
+/* ---- Mouse Trail Particle ---- */
+
+.trail-particle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* ---- Reduced Motion ---- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1;
+        transform: none;
+    }
+}
