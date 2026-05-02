@@ -135,6 +135,21 @@ const projectsData = {
             "Personalized Chief of Staff capabilities"
         ],
         highlights: "A seamless voice-to-action command center for daily operations"
+    },
+    ai_call_agent: {
+        title: "AI Call Agent - Automated Lead Qualification",
+        image: "images/projects/AI-Call-Agent.png",
+        description: "An end-to-end automated lead qualification system that scrapes leads from Google Maps, enriches data with AI, and orchestrates conversational AI calls. It handles everything from initial contact via SMS to deep-dive qualification calls and calendar booking.",
+        technologies: ["n8n", "Google Gemini", "ElevenLabs", "Twilio", "Airtable", "Google Calendar", "Apify"],
+        features: [
+            "Automated Lead Scraping: Extracting high-intent leads from Google Maps via Apify",
+            "Intelligent Data Enrichment: Using Gemini LLM to format contact info and extract key details",
+            "Conversational AI Calling: Automated outbound calls via ElevenLabs for lead qualification",
+            "Multi-Channel Engagement: Seamless SMS notifications and follow-ups using Twilio",
+            "CRM Sync: Real-time synchronization with Airtable for lead management",
+            "Integrated Scheduling: Autonomous calendar availability checking and booking"
+        ],
+        highlights: "Orchestrating complex multi-tool workflows for autonomous business operations."
     }
 };
 
